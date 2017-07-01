@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.giit.www.myrecord.dao.RecordDao">
+
+    <resultMap id="buss_map" type="BussinessInfo">
+        <result property="bunumber" column="bunumber"/>
+        <result property="casenumber" column="casenumber"/>
+        <result property="bustime" column="bustime"/>
+        <result property="buotime" column="buotime"/>
+        <result property="bupname" column="bupname"/>
+        <result property="bupdesc" column="bupdesc"/>
+        <result property="buodesc" column="buodesc"/>
+        <result property="bupupload" column="bupupload"/>
+        <result property="isend" column="isend"/>
+    </resultMap>
+
+    <insert id="createRecord" parameterType="BussinessInfo">
+        INSERT INTO bussiness_info(Bunumber, CaseNumber, BuSTime, BuOTime, BuPName, BuPDesc, BuODesc, BuPupload, Isend)
+        VALUES(#{bunumber}, #{casenumber}, #{bustime}, #{buotime}, #{bupname}, #{bupdesc}, #{buodesc}, #{bupupload}, #{isend})
+    </insert>
+
+    <update id="updateRecord" parameterType="BussinessInfo">
+        UPDATE bussiness_info SET bunumber=#{bunumber}, casenumber=#{casenumber},
+        bustime=#{bustime}, buotime=#{buotime}, bupname=#{bupname}, bupdesc=#{bupdesc},
+        buodesc=#{buodesc}, bupupload=#{bupupload}, isend=#{isend} WHERE CaseNumber=#{casenumber}
+    </update>
+
+    <select id="findByDescription" parameterType="String" resultMap="buss_map">
+--         SELECT bunumber, casenumber, bustime, buotime, bupname, bupdesc, buodesc, bupupload, isend FROM bussiness_info
+        SELECT * FROM bussiness_info
+        WHERE description=#{description}
+    </select>
+
+    <select id="findAll" resultMap="buss_map">
+        SELECT * FROM bussiness_info
+    </select>
+
+</mapper>

@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>桂林电子科技大学教材订购系统</title>
+    <title>行政处罚系统</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/bower_components/bootstrap/dist/css/bootstrap.min.css"
@@ -52,7 +52,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">桂林电子科技大学教材订购系统</a>
+            <a class="navbar-brand" href="#">行政处罚系统</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -90,6 +90,10 @@
                     <li>
                         <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
                             角色管理</a>
+                    </li>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/record.do/record.view"><i class="fa fa-book fa-fw"></i>
+                            案件管理</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> 学院管理<span class="fa arrow"></span></a>
