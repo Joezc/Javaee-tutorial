@@ -3,6 +3,7 @@ package com.giit.www.system.dao;
 import com.giit.www.entity.User;
 import org.apache.ibatis.annotations.Param;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**

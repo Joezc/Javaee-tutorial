@@ -1,6 +1,7 @@
 package com.giit.www.myrecord.service.impl;
 
 import com.giit.www.entity.BussinessInfo;
+import com.giit.www.mapper.BussinessInfoMapper;
 import com.giit.www.myrecord.dao.RecordDao;
 import com.giit.www.myrecord.service.RecordBiz;
 import com.giit.www.system.dao.RoleDao;

@@ -23,7 +23,6 @@ public class AccountController {
     @RequestMapping("profile.view")
     public String profileView() {
         return "/admin/system/account/profile";
-
     }
 
     @RequiresAuthentication

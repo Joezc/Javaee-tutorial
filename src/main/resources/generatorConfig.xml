@@ -42,6 +42,13 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!-- 指定数据库表 -->
-        <table tableName="bussiness_info"></table>
+        <table tableName="serviceinformation"/>
+        <table tableName="dealinfo"/>
+        <table tableName="punishment"/>
+        <table tableName="recordinformation"/>
+        <table tableName="freecutting"/>
+        <table tableName="fileinfos"/>
+        <table tableName="departmentinfo"/>
+        <table tableName="userinfo"/>
     </context>
 </generatorConfiguration>
