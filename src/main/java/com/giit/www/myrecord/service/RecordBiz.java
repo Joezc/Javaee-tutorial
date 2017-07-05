@@ -1,20 +1,20 @@
 package com.giit.www.myrecord.service;
 
-import com.giit.www.entity.BussinessInfo;
-
 import java.util.List;
+
+import com.giit.www.entity.RecordInformation;
 
 /**
  * Created by lzc on 17-7-1.
  */
 public interface RecordBiz {
 
-    public void createRecord(BussinessInfo bussinessInfo);
+    public void createRecord(RecordInformation recordInfo);
 
-    public void updateRecord(BussinessInfo bussinessInfo);
-
+    public void updateRecord(RecordInformation recordInfo);
+    
     public void findByDescription(String description);
 
-    public List<BussinessInfo> findAll();
+    public List<RecordInformation> findAll();
 
 }

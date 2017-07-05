@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>行政处罚系统</title>
+    <title>网上政务大厅行政处罚系统</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/bower_components/bootstrap/dist/css/bootstrap.min.css"
@@ -52,7 +52,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">行政处罚系统</a>
+            <a class="navbar-brand" href="#">网上政务大厅行政处罚系统</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -80,6 +80,262 @@
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
+                
+                <li>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件立案管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                        <li>
+                                <a href="${pageContext.request.contextPath}/record.do/record.view"> 我的立案</a>
+                               <!--  连接到admin/recordinfo.jsp -->
+                            </li>
+                        <li>
+                        
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> 我的立案管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                        
+                            <li>
+                                <a href="${pageContext.request.contextPath}/record.do/record.view">个人立案</a>
+                               <!--  连接到admin/recordinfo.jsp -->
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/record.do/record.view">企业立案</a>
+                               <!--  连接到admin/recordinfo.jsp -->
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/record.do/record.view">查询案件</a>
+                               <!--  连接到admin/recordinfo.jsp -->
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/record.do/record.view">修改案件</a>
+                               <!--  连接到admin/recordinfo.jsp -->
+                            </li>
+                            </ul>
+                            
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 调查取证管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                        
+                        
+                            <li>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss.view">业务管理</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_update.view">修改业务</a>
+                            </li>
+                            </ul>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件审查管理   <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                        
+                        
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                            </li>
+                            </ul>
+                            
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 告知决定管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                        
+                        
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                            </li>
+                            </ul>
+                            
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件送达管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                            </li>
+                            </ul>
+                           
+                            </ul>
+                            </li>
+                            
+                    <li>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件处理管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                        
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件执行管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                            </li>
+                            </ul>
+                            
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件存档管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                            </li>
+                            </ul>
+                            
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件听证管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                            </li>
+                            </ul>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 复议诉讼管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                            </li>
+                            </ul>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 结束案件查询 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                            </li>
+                            </ul>
+                            </ul>
+                        </li>
+                        <li>                        
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> 处罚库管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                       <%--  <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
+                            处罚库管理</a> --%>
+                            
+                            <li>
+                                <a href="${pageContext.request.contextPath}/punish.do/punish.view"> 处罚库查询</a>
+                               <!--  连接到admin/punishment.jsp -->
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/punish.do/punish_add.view"> 添加自由裁量</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/punish.do/punish_update.view"> 修改自由裁量</a>
+                            </li>
+                            </ul>
+                    </li>
+                   
+                    
+                    
+                    <li>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> 系统管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                       <%--  <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
+                            处罚库管理</a> --%>
+                            <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 用户管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/usermanage.do/usermanage.view">用户信息维护</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/usermanage.do/usersetrole.view">用户设置角色</a>
+                            </li>
+                            </ul>
+                            </li>
+                            <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 角色管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/rolemanage.do/roletotal.view">角色信息维护</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/rolemanage.do/roledetail.view">角色信息查看</a>
+                            </li>
+                            </ul>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/rolemanage.do/permission.view"> 权限管理</a>
+                               <!--  连接到admin/permission.jsp -->
+                            </li>
+                            <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 行政级别管理 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/xzlevel.view">级别维护</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/leveldetail.view">级别查询</a>
+                            </li>
+                            </ul>
+                            </li>
+                             
+                    </ul>
+                    </li>
+                    
+                    <%-- <li>
+                        <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
+                            系统管理 </a>
+                    </li> --%>
+                    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> 统计信息 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <!-- <li>
+                                <a href="/"> </a>
+                            </li> -->
+                            <li>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongji.view"> 立案信息统计</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongji.view"> 案件审查信息统计</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongji.view"> 案件送达信息统计</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongji.view"> 案件执行信息统计</a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongji.view"> 案件存档信息统计</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                
+                
                     <li>
                         <a href="${pageContext.request.contextPath}/main.do/admin"><i class="fa fa-book fa-fw"></i> 控制面板</a>
                     </li>
@@ -90,10 +346,6 @@
                     <li>
                         <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
                             角色管理</a>
-                    </li>
-                    <li>
-                        <a href="${pageContext.request.contextPath}/record.do/record.view"><i class="fa fa-book fa-fw"></i>
-                            案件管理</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> 学院管理<span class="fa arrow"></span></a>

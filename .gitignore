@@ -3,3 +3,15 @@ target/
 \.idea/
 
 com\.giit\.www\.orderbook\.iml
+.project
+.classpath
+pom.xml
+website.userlibraries
+src/main/webapp/WEB-INF/web.xml
+src/main/resources/db.properties
+com.giit.www.orderbook.eml
+pom.xml
+*.prefs
+.settings/org.eclipse.wst.common.project.facet.core.xml
+.settings/org.eclipse.wst.common.component
+src/main/resources/db.properties
