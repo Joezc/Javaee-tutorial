@@ -1,7 +1,7 @@
 package com.giit.www.myrecord.controller;
 
-import com.giit.www.college.service.DeptBiz;
-import com.giit.www.entity.Dept;
+import com.giit.www.entity.Userinfo;
+import com.giit.www.myrecord.service.UserroleBiz;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,18 +18,18 @@ import javax.annotation.Resource;
 @RequestMapping("rolemanage.do")
 public class UserroleController {
 
-    @Resource(name = "deptBizImpl")
-    private DeptBiz deptBiz;
+    @Resource(name = "userroleBizImpl")
+    private UserroleBiz UserroleBiz;
     @RequiresRoles("admin")
     @RequestMapping("roletotal.view")
     public String RoletotalView(Model m) {
-        m.addAttribute("deptList", deptBiz.findAll());
+        m.addAttribute("UserroleList", UserroleBiz.findAll());
         return "/admin/record/role_totalinfo";
     }
     @RequiresRoles("admin")
     @RequestMapping("roledetail.view")
     public String RoledetailView(Model m) {
-        m.addAttribute("deptList", deptBiz.findAll());
+        m.addAttribute("UserroleList", UserroleBiz.findAll());
         return "/admin/record/role_detailinfo";
     }
 
@@ -48,28 +48,28 @@ public class UserroleController {
     @RequiresRoles("admin")
     @RequestMapping("permission.view")
     public String PermissionView(Model m) {
-        m.addAttribute("deptList", deptBiz.findAll());
+        m.addAttribute("UserroleList", UserroleBiz.findAll());
         return "/admin/record/permission_info";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("add")
-    public String add(String deptName) {
-        deptBiz.add(deptName);
+    public String add(Userinfo UserroleInfo) {
+    	UserroleBiz.createUserrole(UserroleInfo);
         return "redirect:/rolemanage.do/role_totalinfo.view";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("update")
-    public String update(Dept dept) {
-        deptBiz.update(dept);
+    public String update(Userinfo UserroleInfo) {
+    	UserroleBiz.updateUserrole(UserroleInfo);
         return "redirect:/rolemanage.do/role_totalinfo.view";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("delete")
-    public String delete(int deptId) {
-        deptBiz.delete(deptId);
+    public String delete(Userinfo UserroleInfo) {
+        UserroleBiz.deleteUserrole(UserroleInfo);
         return "redirect:/rolemanage.do/role_totalinfo.view";
     }
 

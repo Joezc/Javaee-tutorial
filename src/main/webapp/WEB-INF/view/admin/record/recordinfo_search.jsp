@@ -5,7 +5,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">立案信息管理</h1>
+            <h1 class="page-header">立案信息查询</h1>
         </div>
         <div class="panel-heading">
         </div>
@@ -49,9 +49,9 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
-                            <a href="${pageContext.request.contextPath}/record.do/record_add.view" class="btn btn-primary" role="button">添加立案</a>
+                            <%-- <a href="${pageContext.request.contextPath}/record.do/record_add.view" class="btn btn-primary" role="button">添加立案</a>
                             <a href="${pageContext.request.contextPath}/record.do/record_update.view" class="btn btn-primary" role="button">修改立案</a>
-                            
+                             --%>
                         </div>
                         <!-- /.table-responsive -->
                     </div>

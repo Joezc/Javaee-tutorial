@@ -1,7 +1,7 @@
 package com.giit.www.myrecord.controller;
 
-import com.giit.www.college.service.DeptBiz;
-import com.giit.www.entity.Dept;
+import com.giit.www.entity.Punishment;
+import com.giit.www.myrecord.service.PunishBiz;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,13 +18,13 @@ import javax.annotation.Resource;
 @RequestMapping("punish.do")
 public class PunishController {
 
-    @Resource(name = "deptBizImpl")
-    private DeptBiz deptBiz;
+    @Resource(name = "punishBizImpl")
+    private PunishBiz PunishBiz;
     @RequiresRoles("admin")
     @RequestMapping("punish.view")
     //改成了punishView()
     public String punishView(Model m) {                 
-        m.addAttribute("deptList", deptBiz.findAll());
+        m.addAttribute("PunishList", PunishBiz.findAll());
         return "/admin/record/punishment";
     }
 
@@ -42,24 +42,25 @@ public class PunishController {
 
     @RequiresRoles("admin")
     @RequestMapping("add")
-    public String add(String deptName) {
-        deptBiz.add(deptName);
+    public String add(Punishment PunishType) {
+        PunishBiz.createPunish(PunishType);
         return "redirect:/punish.do/punish.view";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("update")
-    public String update(Dept dept) {
-        deptBiz.update(dept);
+    public String update(Punishment PunishType) {
+    	PunishBiz.updatePunish(PunishType);
         return "redirect:/punish.do/punish.view";
     }
 
+ /*   //处罚库删除
     @RequiresRoles("admin")
     @RequestMapping("delete")
-    public String delete(int deptId) {
+    public String delete(int I) {
         deptBiz.delete(deptId);
         return "redirect:/punish.do/punish.view";
     }
-
+*/
 
 }

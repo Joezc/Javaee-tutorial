@@ -99,15 +99,12 @@
                             </li>
                             <li>
                                 <a href="${pageContext.request.contextPath}/record.do/record.view">企业立案</a>
-                               <!--  连接到admin/recordinfo.jsp -->
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/record.do/record.view">查询案件</a>
-                               <!--  连接到admin/recordinfo.jsp -->
+                                <a href="${pageContext.request.contextPath}/record.do/record_search.view">查询案件</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/record.do/record.view">修改案件</a>
-                               <!--  连接到admin/recordinfo.jsp -->
+                                <a href="${pageContext.request.contextPath}/record.do/record_update.view">修改案件</a>
                             </li>
                             </ul>
                             
@@ -130,13 +127,13 @@
                         
                         
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss.view">业务管理</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_update.view">修改业务</a>
                             </li>
                             </ul>
                             
@@ -145,26 +142,26 @@
                         
                         
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss.view">业务管理</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_update.view">修改业务</a>
                             </li>
                             </ul>
                             
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件送达管理 <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss.view">业务管理</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_update.view">修改业务</a>
                             </li>
                             </ul>
                            
@@ -178,63 +175,63 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件执行管理 <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss.view">业务管理</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_update.view">修改业务</a>
                             </li>
                             </ul>
                             
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件存档管理 <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss.view">业务管理</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_update.view">修改业务</a>
                             </li>
                             </ul>
                             
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件听证管理 <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss.view">业务管理</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_update.view">修改业务</a>
                             </li>
                             </ul>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> 复议诉讼管理 <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss.view">业务管理</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_update.view">修改业务</a>
                             </li>
                             </ul>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> 结束案件查询 <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">业务管理</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss.view">业务管理</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">新增业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view">修改业务</a>
+                                <a href="${pageContext.request.contextPath}/buss.do/buss_update.view">修改业务</a>
                             </li>
                             </ul>
                             </ul>

@@ -10,7 +10,7 @@ import com.giit.www.entity.RecordInformation;
 public interface RecordBiz {
 
     public void createRecord(RecordInformation recordInfo);
-
+    
     public void updateRecord(RecordInformation recordInfo);
     
     public void findByDescription(String description);

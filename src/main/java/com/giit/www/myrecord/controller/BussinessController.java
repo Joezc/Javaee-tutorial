@@ -1,7 +1,8 @@
 package com.giit.www.myrecord.controller;
 
-import com.giit.www.college.service.DeptBiz;
-import com.giit.www.entity.Dept;
+import com.giit.www.myrecord.service.BussinessBiz;
+import com.giit.www.entity.Serviceinformation;
+
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,17 +14,18 @@ import javax.annotation.Resource;
  * Created by haining 
  */
 
-//用户点击业务管理，跳转到业务管理，新增业务，修改业务界面
+//用户点击业务管理，跳转到业务管理，新增业务，修改、删除业务界面 
 @Controller
 @RequestMapping("buss.do")
 public class BussinessController {
 
-    @Resource(name = "deptBizImpl")
-    private DeptBiz deptBiz;
+    @Resource(name="bussinessBizImpl")
+    private BussinessBiz BussinessBiz;
+    
     @RequiresRoles("admin")
     @RequestMapping("buss.view")
     public String bussView(Model m) {
-        m.addAttribute("deptList", deptBiz.findAll());
+        m.addAttribute("BussinessList", BussinessBiz.findAll());
         return "/admin/record/bussinessinfo";
     }
 
@@ -41,24 +43,25 @@ public class BussinessController {
 
     @RequiresRoles("admin")
     @RequestMapping("add")
-    public String add(String deptName) {
-        deptBiz.add(deptName);
+    public String add(Serviceinformation Bussinessinfo) {
+        BussinessBiz.createBussiness(Bussinessinfo);
         return "redirect:/buss.do/bussinessinfo.view";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("update")
-    public String update(Dept dept) {
-        deptBiz.update(dept);
+    public String update(Serviceinformation Bussinessinfo) {
+    	BussinessBiz.updateBussiness(Bussinessinfo);
         return "redirect:/buss.do/bussinessinfo.view";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("delete")
-    public String delete(int deptId) {
-        deptBiz.delete(deptId);
+    public String delete(Serviceinformation Bussinessinfo) {
+    	BussinessBiz.deleteBussiness(Bussinessinfo);
         return "redirect:/buss.do/bussinessinfo.view";
     }
 
 
 }
+

@@ -1,7 +1,7 @@
 package com.giit.www.myrecord.controller;
 
-import com.giit.www.college.service.DeptBiz;
-import com.giit.www.entity.Dept;
+import com.giit.www.myrecord.service.XzlevelBiz;
+import com.giit.www.entity.Userinfo;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,18 +18,19 @@ import javax.annotation.Resource;
 @RequestMapping("xzlevel.do")
 public class XzlevelController {
 
-    @Resource(name = "deptBizImpl")
-    private DeptBiz deptBiz;
+    @Resource(name = "xzlevelBizImpl")
+    private XzlevelBiz XzlevelBiz;
+
     @RequiresRoles("admin")
     @RequestMapping("xzlevel.view")
     public String LeveltotalView(Model m) {
-        m.addAttribute("deptList", deptBiz.findAll());
+        m.addAttribute("XzlevelList", XzlevelBiz.findAll());
         return "/admin/record/level_totalinfo";
     }
     @RequiresRoles("admin")
     @RequestMapping("leveldetail.view")
     public String LeveldetailView(Model m) {
-        m.addAttribute("deptList", deptBiz.findAll());
+        m.addAttribute("XzlevelList", XzlevelBiz.findAll());
         return "/admin/record/level_detailinfo";
     }
 
@@ -74,22 +75,22 @@ public class XzlevelController {
     
     @RequiresRoles("admin")
     @RequestMapping("add")
-    public String add(String deptName) {
-        deptBiz.add(deptName);
+    public String add(Userinfo XzlevelInfo) {
+    	XzlevelBiz.createXzlevel(XzlevelInfo);
         return "redirect:/xzlevel.do/level_totalinfo.view";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("update")
-    public String update(Dept dept) {
-        deptBiz.update(dept);
+    public String update(Userinfo XzlevelInfo) {
+    	XzlevelBiz.updateXzlevel(XzlevelInfo);
         return "redirect:/xzlevel.do/level_totalinfo.view";
     }
-
+    /*逻辑上的删除*/
     @RequiresRoles("admin")
     @RequestMapping("delete")
-    public String delete(int deptId) {
-        deptBiz.delete(deptId);
+    public String delete(Userinfo XzlevelInfo) {
+    	XzlevelBiz.updateXzlevel(XzlevelInfo);
         return "redirect:/xzlevel.do/level_totalinfo.view";
     }
 

@@ -1,7 +1,7 @@
 package com.giit.www.myrecord.controller;
 
-import com.giit.www.college.service.StudentBiz;
-import com.giit.www.entity.Student;
+import com.giit.www.entity.Userinfo;
+import com.giit.www.myrecord.service.UsermanageBiz;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,31 +13,31 @@ import javax.servlet.annotation.MultipartConfig;
 import java.io.IOException;
 
 /**
- * Created by c0de8ug on 16-2-12.
+ * 用户管理
  */
 @Controller
 @RequestMapping("usermanage.do")
 public class UsermanageController {
 
-    @Resource(name = "studentBizImpl")
-    StudentBiz studentBiz;
+    @Resource(name = "userManageBizImpl")
+    UsermanageBiz UsermanageBiz;
 
     @RequiresRoles("admin")
     @RequestMapping("usermanage.view")
     
     //改为usermanageView
     public String usermanageView(Model m) {
-        //TODO 将biz命名为和业务有关的函数方法,不知道是否正确留个吭
-        m.addAttribute("studentList", studentBiz.studentView());
+     
+        m.addAttribute("UsermanageList", UsermanageBiz.findAll());
         return "/admin/record/usermanagement";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("usersetrole.view")
     
-    //改为usermanageView
+    //用户设置角色信息
     public String usersetroleView(Model m) {
-        m.addAttribute("studentList", studentBiz.studentView());
+    	m.addAttribute("UsermanageList", UsermanageBiz.findAll());
         return "/admin/record/SetuserRole";
     }
 
@@ -55,17 +55,23 @@ public class UsermanageController {
         return "/admin/record/userinfo_update";
     }
 
+ /*   @RequiresRoles("admin")
+    @RequestMapping("add")
+    public String add(Model m, MultipartFile pic, Usermanage student) throws IOException {
+        UsermanageBiz.add(Usermanage, pic);
+        return "redirect:/usermanage.do/usermanage.view";
+    }*/
     @RequiresRoles("admin")
     @RequestMapping("add")
-    public String add(Model m, MultipartFile pic, Student student) throws IOException {
-        studentBiz.add(student, pic);
+    public String add(Userinfo Usermanageinfo) {
+        UsermanageBiz.createUsermanage(Usermanageinfo);
         return "redirect:/usermanage.do/usermanage.view";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("delete")
-    public String delete(Model m, int studentId) {
-        studentBiz.delete(studentId);
+    public String delete(Model m, Userinfo UserInfo) {
+        UsermanageBiz.deleteUsermanage(UserInfo);
         return "redirect:/usermanage.do/usermanage.view";
     }
 
