@@ -347,4 +347,5 @@
       Isend = #{isend,jdbcType=VARCHAR}
     where Bunumber = #{bunumber,jdbcType=VARCHAR}
   </update>
+
 </mapper>

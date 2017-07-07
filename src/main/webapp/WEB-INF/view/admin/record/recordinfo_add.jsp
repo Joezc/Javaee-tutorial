@@ -20,13 +20,18 @@
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
                             <form action="${pageContext.request.contextPath}/record.do/add" method="get">
+                                <label>案件流水号</label>
+                                <input class="form-control" name="casenumber">
+                                <label>用户名</label>
+                                <input class="form-control" name="userid">
                                 <label>部门</label>
-                                <select onchange="test(this)" class="form-control" name="Dpname">
-                                    <option>-请选择-</option>
-                                    <c:forEach var="dpname" items="${dpnameList}">
-                                        <option>${dpname}</option>
-                                    </c:forEach>
-                                </select>
+                                <%--<select onchange="test(this)" class="form-control" name="Dpname">--%>
+                                    <%--<option>-请选择-</option>--%>
+                                    <%--<c:forEach var="dpname" items="${dpnameList}">--%>
+                                        <%--<option>${dpname}</option>--%>
+                                    <%--</c:forEach>--%>
+                                <%--</select>--%>
+                                <input class="form-control" name="dpno">
                                 <label>当事人</label>
                                  <input class="form-control" name="parties">
                                  <label>案件来源</label>

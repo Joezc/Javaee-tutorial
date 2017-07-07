@@ -11,11 +11,11 @@ public interface UsermanageBiz {
 
     public void createUsermanage(Userinfo UserInfo);
     
-    public void updateUsermanage(Userinfo UserInfo);
+    public void updateUsermanage(Userinfo userinfo);
     
-    public void deleteUsermanage(Userinfo UserInfo);
+    public void deleteUsermanage(String userid);
     
-    public void findByDescription(String description);
+    public Userinfo findById(String userid);
 
     public List<Userinfo> findAll();
 

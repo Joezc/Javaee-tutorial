@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <jsp:include page="/WEB-INF/view/admin/nav.jsp"></jsp:include>
 
 <!-- Page Content -->
@@ -32,9 +33,9 @@
                                  <label>案件流水号</label>
                                  <input class="form-control" name="casenumber">
                                  <label>业务开始日期</label>
-                                 <input class="form-control" name="bustime">
+                                 <input class="form-control" type="datetime" name="bustime" >
                                  <label>业务实际结束日期</label>
-                                 <input class="form-control" name="buotime">
+                                 <input class="form-control" type="datetime" name="buotime" >
                                  <label>业务参与人员</label>
                                  <input class="form-control" name="bupname">
                                  <label>过程描述</label>

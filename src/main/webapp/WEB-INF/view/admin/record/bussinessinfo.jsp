@@ -5,7 +5,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">业务信息管理</h1>
+            <h1 class="page-header">用户信息管理</h1>
         </div>
         <div class="panel-heading">
         </div>
@@ -13,7 +13,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        业务信息
+                        用户信息
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -32,7 +32,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach var="bussiness" items="${bussinessList}">
+                                <c:forEach var="bussiness" items="${UsermanageList}">
                                     <tr>
                                         <td>${bussiness.bunumber}</td>
                                         <td>${bussiness.bustime}</td>
@@ -43,7 +43,7 @@
                                         <td>${bussiness.bupupload}</td>
                                         <td>${bussiness.casewhether}</td>
                                         <td>
-                                        <!-- 这里没改 -->
+                                            <!-- 这里没改 -->
                                             <a href="${pageContext.request.contextPath}/student.do/student_update.view?studentId=${student.studentId}">修改</a>
                                         </td>
                                         <td>
@@ -56,7 +56,7 @@
                             </table>
                             <a href="${pageContext.request.contextPath}/buss.do/buss_add.view" class="btn btn-primary" role="button">添加业务</a>
                             <a href="${pageContext.request.contextPath}/buss.do/buss_update.view" class="btn btn-primary" role="button">修改业务</a>
-                            
+
                         </div>
                         <!-- /.table-responsive -->
                     </div>

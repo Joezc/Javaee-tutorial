@@ -4,12 +4,10 @@
 <script src=""></script>
 <!-- Page Content -->
 <div id="page-wrapper">
-
     <div class="container-fluid">
         <div>
             <h1 class="page-header">班级管理</h1>
         </div>
-        <%--<c:forEach var="entrty" items="${classBelongSpec}">--%>
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">

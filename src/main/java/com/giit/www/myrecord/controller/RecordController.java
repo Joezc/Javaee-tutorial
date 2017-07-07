@@ -1,6 +1,6 @@
 package com.giit.www.myrecord.controller;
 
-import com.giit.www.entity.RecordInformation;
+import com.giit.www.entity.Recordinformation;
 import com.giit.www.entity.Serviceinformation;
 import com.giit.www.myrecord.service.RecordBiz;
 
@@ -24,10 +24,10 @@ public class RecordController {
 
     @Resource(name = "recordBizImpl")
     private RecordBiz recordBiz;
+
     @RequiresRoles("admin")
     @RequestMapping("record.view")
-    //改成了recordView()
-    public String recordView(Model m) {                 
+    public String recordView(Model m) {
         m.addAttribute("recordList", recordBiz.findAll());
         return "/admin/record/recordinfo";
     }
@@ -35,6 +35,7 @@ public class RecordController {
     @RequiresRoles("admin")
     @RequestMapping("record_add.view")
     public String recordAddView(Model m) {
+
         return "/admin/record/recordinfo_add";
     }
 
@@ -46,14 +47,14 @@ public class RecordController {
 
     @RequiresRoles("admin")
     @RequestMapping("add")
-    public String add(RecordInformation record, RedirectAttributes redirectAttributes) {
+    public String add(Recordinformation record) {
         recordBiz.createRecord(record);
         return "redirect:/record.do/record.view";
     }
     //update方法有待研究
     @RequiresRoles("admin")
     @RequestMapping("update")
-    public String update(RecordInformation record, RedirectAttributes redirectAttributes) {
+    public String update(Recordinformation record) {
         recordBiz.updateRecord(record);
         return "redirect:/record.do/record.view";
     }

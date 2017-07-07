@@ -25,7 +25,7 @@ public class BussinessController {
     @RequiresRoles("admin")
     @RequestMapping("buss.view")
     public String bussView(Model m) {
-        m.addAttribute("BussinessList", BussinessBiz.findAll());
+        m.addAttribute("bussinessList", BussinessBiz.findAll());
         return "/admin/record/bussinessinfo";
     }
 

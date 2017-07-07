@@ -24,18 +24,13 @@ public class UsermanageController {
 
     @RequiresRoles("admin")
     @RequestMapping("usermanage.view")
-    
-    //改为usermanageView
     public String usermanageView(Model m) {
-     
         m.addAttribute("UsermanageList", UsermanageBiz.findAll());
         return "/admin/record/usermanagement";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("usersetrole.view")
-    
-    //用户设置角色信息
     public String usersetroleView(Model m) {
     	m.addAttribute("UsermanageList", UsermanageBiz.findAll());
         return "/admin/record/SetuserRole";
@@ -45,13 +40,13 @@ public class UsermanageController {
     @RequestMapping("user_add.view")
     public String usemanageAddView(Model m) {
 
-        return "/admin/record/userinfo_add";
+        return "/admin/record/usermanagement_add";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("user_update.view")
-    public String usermanageUpdateView(Model m) {
-
+    public String usermanageUpdateView(Model m, String userid) {
+        m.addAttribute("user", UsermanageBiz.findById(userid));
         return "/admin/record/userinfo_update";
     }
 
@@ -69,9 +64,16 @@ public class UsermanageController {
     }
 
     @RequiresRoles("admin")
+    @RequestMapping("update")
+    public String update(Userinfo userinfo) {
+        UsermanageBiz.updateUsermanage(userinfo);
+        return "redirect:/usermanage.do/usermanage.view";
+    }
+
+    @RequiresRoles("admin")
     @RequestMapping("delete")
-    public String delete(Model m, Userinfo UserInfo) {
-        UsermanageBiz.deleteUsermanage(UserInfo);
+    public String delete(Model m, String userid) {
+        UsermanageBiz.deleteUsermanage(userid);
         return "redirect:/usermanage.do/usermanage.view";
     }
 

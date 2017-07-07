@@ -1,6 +1,6 @@
 package com.giit.www.myrecord.service.impl;
 
-import com.giit.www.entity.RecordInformation;
+import com.giit.www.entity.Recordinformation;
 import com.giit.www.myrecord.dao.RecordDao;
 import com.giit.www.myrecord.service.RecordBiz;
 import com.giit.www.system.dao.RoleDao;
@@ -21,12 +21,12 @@ public class RecordBizImpl implements RecordBiz {
     private RecordBiz recordBiz;
 
     @Override
-    public void createRecord(RecordInformation recordInfo) {
+    public void createRecord(Recordinformation recordInfo) {
         recordDao.createRecord(recordInfo);
     }
 
     @Override
-    public void updateRecord(RecordInformation recordInfo) {
+    public void updateRecord(Recordinformation recordInfo) {
         recordDao.updateRecord(recordInfo);
     }
 
@@ -36,7 +36,7 @@ public class RecordBizImpl implements RecordBiz {
     }
 
     @Override
-    public List<RecordInformation> findAll() {
+    public List<Recordinformation> findAll() {
         return recordDao.findAll();
     }
 }
