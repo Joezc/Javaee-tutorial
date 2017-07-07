@@ -47,4 +47,14 @@
 
     <import resource="classpath:spring-mvc-shiro.xml"/>
 
+    <mvc:annotation-driven conversion-service="customConversionService">
+    </mvc:annotation-driven>
+    <bean id="customConversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="com.giit.www.util.DateConverter"/>
+            </set>
+        </property>
+    </bean>
+
 </beans>

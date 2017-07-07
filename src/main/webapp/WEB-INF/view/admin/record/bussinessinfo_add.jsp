@@ -7,7 +7,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">新增业务</h1>
+            <h1 class="page-header">新增案件</h1>
         </div>
         <div class="panel-heading">
         </div>
@@ -15,7 +15,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        业务信息
+                        案件信息
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -28,28 +28,35 @@
                                         <option>${dpname}</option>
                                     </c:forEach>
                                 </select> --%>
-                                <label>业务编号</label>
-                                 <input class="form-control" name="bunumber">
-                                 <label>案件流水号</label>
-                                 <input class="form-control" name="casenumber">
-                                 <label>业务开始日期</label>
-                                 <input class="form-control" type="datetime" name="bustime" >
-                                 <label>业务实际结束日期</label>
-                                 <input class="form-control" type="datetime" name="buotime" >
-                                 <label>业务参与人员</label>
-                                 <input class="form-control" name="bupname">
-                                 <label>过程描述</label>
-                                 <input class="form-control" name="bupdesc">
-                                 <label>结果描述</label>
-                                 <input class="form-control" name="buodesc">
-                                 <label>附件</label>
-                                 <input class="form-control" name="bupupload">
-                                 <label>是否结案</label>
-                                 <select class="form-control" name="casewhether">
-                                 <option>是</option>
-                                 <option>否</option>
-                                 </select>
-                                 <!-- <input class="form-control" name="casewhether"> -->
+                                <label>案件流水号</label>
+                                <input class="form-control" name="casenumber">
+                                <label>用户名</label>
+                                <input class="form-control" name="userid">
+                                <label>裁量编号</label>
+                                <input class="form-control" name="cutnumber">
+                                <label>案件标题</label>
+                                <input class="form-control" name="casetitle">
+                                <label>当事人</label>
+                                <input class="form-control" name="parties">
+                                <label>案件来源</label>
+                                <input class="form-control" name="casesource">
+                                <label>案件承办人</label>
+                                <input class="form-control" name="casename">
+                                <label>立案时间</label>
+                                <input class="form-control" name="recordtime">
+                                <label>案情描述</label>
+                                <input class="form-control" name="crimereports">
+                                <label>处罚依据</label>
+                                <input class="form-control" name="according">
+                                <label>立案附件上传</label>
+                                <input class="form-control" name="fileupload">
+                                <label>案件类型</label>
+                                <input class="form-control" name="casemold">
+                                    <label>部门编号</label>
+                                    <input class="form-control" name="dpno">
+                                <label>当前状态</label>
+                                <input class="form-control" name="currentstauis">
+                                <!-- <input class="form-control" name="casewhether"> -->
                                 <%-- <label>目前状态</label>
                                 <select class="form-control" name="year">
                                     <c:forEach var="term" items="${stateList}">
@@ -86,9 +93,9 @@
 
     var deptAndSpec = ${deptAndSpecJson}
 
-            function setSpec(dept) {
-                setSelectOption('spec', deptAndSpec[dept], '-请选择-');
-            }
+        function setSpec(dept) {
+            setSelectOption('spec', deptAndSpec[dept], '-请选择-');
+        }
 
     /*
      * 说明：将传入的选项值加入到指定的下拉列表中

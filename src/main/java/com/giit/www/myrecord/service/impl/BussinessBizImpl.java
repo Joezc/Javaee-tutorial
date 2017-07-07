@@ -2,7 +2,9 @@ package com.giit.www.myrecord.service.impl;
 
 import java.util.List;
 
+import com.giit.www.entity.Recordinformation;
 import com.giit.www.entity.ServiceinformationExample;
+import com.giit.www.mapper.RecordinformationMapper;
 import com.giit.www.mapper.ServiceinformationMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,33 +14,31 @@ import com.giit.www.myrecord.service.BussinessBiz;
 
 @Service
 public class BussinessBizImpl implements BussinessBiz{
-
 	@Autowired
-	private ServiceinformationMapper serviceinformationMapper;
+	RecordinformationMapper recordinformationMapper;
 
 	@Override
-	public void createBussiness(Serviceinformation BussinessInfo) {
-		serviceinformationMapper.insert(BussinessInfo);
+	public void createBussiness(Recordinformation recordinformation) {
+		recordinformationMapper.insert(recordinformation);
 	}
 
 	@Override
-	public void updateBussiness(Serviceinformation BussinessInfo) {
-		serviceinformationMapper.updateByPrimaryKey(BussinessInfo);
+	public void updateBussiness(Recordinformation recordinformation) {
+		recordinformationMapper.updateByPrimaryKey(recordinformation);
 	}
 
 	@Override
-	public void deleteBussiness(Serviceinformation BussinessInfo) {
-		serviceinformationMapper.deleteByPrimaryKey(BussinessInfo.getBunumber());
+	public void deleteBussiness(String casenumber) {
+		recordinformationMapper.deleteByPrimaryKey(casenumber);
 	}
 
 	@Override
-	public void findByDescription(String description) {
-		// TODO Auto-generated method stub
+	public Recordinformation findById(String casenumber) {
+		return recordinformationMapper.selectByPrimaryKey(casenumber);
 	}
 
 	@Override
-	public List<Serviceinformation> findAll() {
-		return  serviceinformationMapper.findAll();
+	public List<Recordinformation> findAll() {
+		return recordinformationMapper.findAll();
 	}
-
 }

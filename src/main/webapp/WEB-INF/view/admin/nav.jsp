@@ -118,9 +118,6 @@
                                     <li>
                                         <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
                                     </li>
-                                    <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss_update.view">修改业务</a>
-                                    </li>
                                 </ul>
                             </li>
 
@@ -279,42 +276,35 @@
                             <%--  <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
                                  处罚库管理</a> --%>
                             <li>
-                                <a href="#"><i class="fa fa-wrench fa-fw"></i> 用户管理 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="${pageContext.request.contextPath}/usermanage.do/usermanage.view">用户信息维护</a>
-                                    </li>
-                                    <li>
-                                        <a href="${pageContext.request.contextPath}/usermanage.do/usersetrole.view">用户设置角色</a>
-                                    </li>
-                                </ul>
+                                <a href="${pageContext.request.contextPath}/usermanage.do/usermanage.view">用户管理</a>
+                                <%--<a href="#"><i class="fa fa-wrench fa-fw"></i> 用户管理 <span class="fa arrow"></span></a>--%>
+                                <%--<ul class="nav nav-third-level">--%>
+                                    <%--<li>--%>
+                                        <%--<a href="${pageContext.request.contextPath}/usermanage.do/usermanage.view">用户信息维护</a>--%>
+                                    <%--</li>--%>
+                                    <%--<li>--%>
+                                        <%--<a href="${pageContext.request.contextPath}/usermanage.do/usersetrole.view">用户设置角色</a>--%>
+                                    <%--</li>--%>
+                                <%--</ul>--%>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-wrench fa-fw"></i> 角色管理 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="${pageContext.request.contextPath}/rolemanage.do/roletotal.view">角色信息维护</a>
-                                    </li>
-                                    <li>
-                                        <a href="${pageContext.request.contextPath}/rolemanage.do/roledetail.view">角色信息查看</a>
-                                    </li>
-                                </ul>
+                                <a href="${pageContext.request.contextPath}/role.do/role.view">角色管理</a>
                             </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/rolemanage.do/permission.view"> 权限管理</a>
-                                <!--  连接到admin/permission.jsp -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-wrench fa-fw"></i> 行政级别管理 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="${pageContext.request.contextPath}/xzlevel.do/xzlevel.view">级别维护</a>
-                                    </li>
-                                    <li>
-                                        <a href="${pageContext.request.contextPath}/xzlevel.do/leveldetail.view">级别查询</a>
-                                    </li>
-                                </ul>
-                            </li>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/rolemanage.do/permission.view"> 权限管理</a>--%>
+                                <%--<!--  连接到admin/permission.jsp -->--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="#"><i class="fa fa-wrench fa-fw"></i> 行政级别管理 <span class="fa arrow"></span></a>--%>
+                                <%--<ul class="nav nav-third-level">--%>
+                                    <%--<li>--%>
+                                        <%--<a href="${pageContext.request.contextPath}/xzlevel.do/xzlevel.view">级别维护</a>--%>
+                                    <%--</li>--%>
+                                    <%--<li>--%>
+                                        <%--<a href="${pageContext.request.contextPath}/xzlevel.do/leveldetail.view">级别查询</a>--%>
+                                    <%--</li>--%>
+                                <%--</ul>--%>
+                            <%--</li>--%>
 
                         </ul>
                     </li>
@@ -352,14 +342,10 @@
                     <li>
                         <a href="${pageContext.request.contextPath}/main.do/admin"><i class="fa fa-book fa-fw"></i> 控制面板</a>
                     </li>
-                    <li>
-                        <a href="${pageContext.request.contextPath}/user.do/user.view"><i class="fa fa-book fa-fw"></i>
-                            用户管理</a>
-                    </li>
-                    <li>
-                        <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
-                            角色管理</a>
-                    </li>
+                    <%--<li>--%>
+                        <%--<a href="${pageContext.request.contextPath}/user.do/user.view"><i class="fa fa-book fa-fw"></i>--%>
+                            <%--用户管理</a>--%>
+                    <%--</li>--%>
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> 学院管理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">

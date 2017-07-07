@@ -1,5 +1,7 @@
 package com.giit.www.myrecord.controller;
 
+import com.giit.www.entity.BussinessInfo;
+import com.giit.www.entity.Recordinformation;
 import com.giit.www.myrecord.service.BussinessBiz;
 import com.giit.www.entity.Serviceinformation;
 
@@ -37,29 +39,30 @@ public class BussinessController {
 
     @RequiresRoles("admin")
     @RequestMapping("buss_update.view")
-    public String bussUpdateView(Model m) {
+    public String bussUpdateView(Model m, String casenumber) {
+        m.addAttribute("bussiness", BussinessBiz.findById(casenumber));
         return "/admin/record/bussinessinfo_update";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("add")
-    public String add(Serviceinformation Bussinessinfo) {
-        BussinessBiz.createBussiness(Bussinessinfo);
-        return "redirect:/buss.do/bussinessinfo.view";
+    public String add(Recordinformation recordinformation) {
+        BussinessBiz.createBussiness(recordinformation);
+        return "redirect:/buss.do/buss.view";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("update")
-    public String update(Serviceinformation Bussinessinfo) {
-    	BussinessBiz.updateBussiness(Bussinessinfo);
-        return "redirect:/buss.do/bussinessinfo.view";
+    public String update(Recordinformation recordinformation) {
+    	BussinessBiz.updateBussiness(recordinformation);
+        return "redirect:/buss.do/buss.view";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("delete")
-    public String delete(Serviceinformation Bussinessinfo) {
-    	BussinessBiz.deleteBussiness(Bussinessinfo);
-        return "redirect:/buss.do/bussinessinfo.view";
+    public String delete(String casenumber) {
+    	BussinessBiz.deleteBussiness(casenumber);
+        return "redirect:/buss.do/buss.view";
     }
 
 
