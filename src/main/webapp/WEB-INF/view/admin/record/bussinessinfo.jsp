@@ -48,7 +48,7 @@
                                         <td>${record.parties}</td>
                                         <td>${record.casesource}</td>
                                         <td>${record.casename}</td>
-                                        <td>${record.recordtime}</td>
+                                        <td>${record.recordtime.year+1900}-${record.recordtime.month+1}-${record.recordtime.date}</td>
                                         <td>${record.crimereports}</td>
                                         <td>${record.according}</td>
                                         <td>${record.fileupload}</td>

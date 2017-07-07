@@ -1,5 +1,6 @@
 package com.giit.www.myrecord.service;
 
+import java.util.Date;
 import java.util.List;
 
 import com.giit.www.entity.Userinfo;
@@ -24,4 +25,5 @@ public interface XzlevelBiz {
 
     public List<Userinfo> findAll();
 
+    List<Integer> searchByTime(Date starttime, Date endtime);
 }

@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by haining 
@@ -56,7 +59,15 @@ public class XzlevelController {
 
     @RequiresRoles("admin")
     @RequestMapping("search")
-    public String search(Date starttime, Date endtime, String dpname) {
+    public String search(Model m, Date starttime, Date endtime, String dpname) {
+        m.addAttribute("starttime", starttime.toString());
+        m.addAttribute("endtime", endtime.toString());
+        m.addAttribute("dpname", dpname);
+        List<Integer> num = XzlevelBiz.searchByTime(starttime, endtime);
+        m.addAttribute("numOfFiniashedRecord", Integer.toString(num.get(0)));
+        m.addAttribute("numOfAllRecord", Integer.toString(num.get(1)));
+        m.addAttribute("ratio", Double.toString(1.0* num.get(0) / num.get(1)));
+
         return "/admin/record/tongji_info";
     }
 

@@ -47,16 +47,14 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <%--<c:forEach var="user" items="${UsermanageList}">--%>
-                                    <%--<tr>--%>
-                                        <%--<td>${user.userid}</td>--%>
-                                        <%--<td>${user.roleid}</td>--%>
-                                        <%--<td>${user.dpno}</td>--%>
-                                        <%--<td>${user.levelno}</td>--%>
-                                        <%--<td>${user.password}</td>--%>
-                                        <%--<td>${user.cpassword}</td>--%>
-                                    <%--</tr>--%>
-                                <%--</c:forEach>--%>
+                                    <tr>
+                                        <td>${starttime}</td>
+                                        <td>${endtime}</td>
+                                        <td>${dpname}</td>
+                                        <td>${numOfAllRecord}</td>
+                                        <td>${numOfFiniashedRecord}</td>
+                                        <td>${ratio}</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
