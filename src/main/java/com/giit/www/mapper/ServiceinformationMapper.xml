@@ -356,6 +356,6 @@
   </select>
 
   <select id="findAll" resultMap="BaseResultMap">
-    SELECT * FROM bussiness_info
+    SELECT * FROM serviceinformation
   </select>
 </mapper>

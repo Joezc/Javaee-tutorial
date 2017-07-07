@@ -1,12 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <jsp:include page="/WEB-INF/view/admin/nav.jsp"></jsp:include>
 
 <!-- Page Content -->
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">案件信息修改</h1>
+            <h1 class="page-header">新增业务</h1>
         </div>
         <div class="panel-heading">
         </div>
@@ -14,49 +15,31 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        案件信息
+                        业务信息
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
-                            <form action="${pageContext.request.contextPath}/buss.do/update" method="get">
-                                <%-- <label>部门</label>
-                                <select onchange="test(this)" class="form-control" name="Dpname">
-                                    <option>-请选择-</option>
-                                    <c:forEach var="dpname" items="${dpnameList}">
-                                        <option>${dpname}</option>
-                                    </c:forEach>
-                                </select>
-                                --%>
-                                <label>案件流水号</label>
-                                <input class="form-control" name="casenumber" value="${bussiness.casenumber}" readonly>
-                                <label>用户名</label>
-                                <input class="form-control" name="userid" value="${bussiness.userid}">
-                                <label>裁量编号</label>
-                                <input class="form-control" name="cutnumber" value="${bussiness.cutnumber}">
-                                <label>案件标题</label>
-                                <input class="form-control" name="casetitle" value="${bussiness.casetitle}">
-                                <label>当事人</label>
-                                <input class="form-control" name="parties" value="${bussiness.parties}">
-                                <label>案件来源</label>
-                                <input class="form-control" name="casesource" value="${bussiness.casesource}">
-                                <label>案件承办人</label>
-                                <input class="form-control" name="casename" value="${bussiness.casename}">
-                                <label>立案时间</label>
-                                <input class="form-control" name="recordtime" value="${bussiness.recordtime.year+1900}-${bussiness.recordtime.month+1}-${bussiness.recordtime.date}">
-                                <label>案情描述</label>
-                                <input class="form-control" name="crimereports" value="${bussiness.crimereports}">
-                                <label>处罚依据</label>
-                                <input class="form-control" name="according" value="${bussiness.according}">
-                                <label>立案附件上传</label>
-                                <input class="form-control" name="fileupload" value="${bussiness.fileupload}">
-                                <label>案件类型</label>
-                                <input class="form-control" name="casemold" value="${bussiness.casemold}">
-                                <label>部门编号</label>
-                                <input class="form-control" name="dpno" value="${bussiness.dpno}">
-                                <label>当前状态</label>
-                                <input class="form-control" name="currentstauis" value="${bussiness.currentstauis}">
-                                <!-- <input class="form-control" name="state"> -->
+                            <form action="${pageContext.request.contextPath}/service.do/add" method="get">
+                                    <label>当前业务编号</label>
+                                    <input class="form-control" name="bunumber">
+                                    <label>案件流水号</label>
+                                    <input class="form-control" name="casenumber">
+                                    <label>开始日期</label>
+                                    <input class="form-control" name="bustime">
+                                    <label>实际结束日期</label>
+                                    <input class="form-control" name="buotime">
+                                    <label>参与人员</label>
+                                    <input class="form-control" name="bupname">
+                                    <label>过程描述</label>
+                                    <input class="form-control" name="bupdesc">
+                                    <label>结果描述</label>
+                                    <input class="form-control" name="buodesc">
+                                    <label>过程附件上传</label>
+                                    <input class="form-control" name="bupupload">
+                                    <label>是否结案</label>
+                                    <input class="form-control" name="casewhether">
+                                    <!-- <input class="form-control" name="casewhether"> -->
                                 <%-- <label>目前状态</label>
                                 <select class="form-control" name="year">
                                     <c:forEach var="term" items="${stateList}">
@@ -70,7 +53,7 @@
                                 <%--</select>--%>
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">更新
+                                        class="btn btn-primary form-control">新增
                                 </button>
                             </form>
                         </div>
@@ -86,9 +69,7 @@
 
     <!-- /.container-fluid -->
 </div>
-</div>
 <!-- /#page-wrapper -->
-</div>
 <!-- /#wrapper -->
 <script>
 

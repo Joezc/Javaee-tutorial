@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 /**
  * Created by haining 
@@ -52,27 +53,14 @@ public class XzlevelController {
     public String TongjiAddView(Model m) {
         return "/admin/record/tongji_info";
     }
-    /*@RequiresRoles("admin")
-    @RequestMapping("shencha.view")
-    public String ShenchaAddView(Model m) {
-        return "/admin/record/shencha_info";
-    }
+
     @RequiresRoles("admin")
-    @RequestMapping("songda.view")
-    public String SongdaAddView(Model m) {
-        return "/admin/record/songda_info";
+    @RequestMapping("search")
+    public String search(Date starttime, Date endtime, String dpname) {
+        return "/admin/record/tongji_info";
     }
-    @RequiresRoles("admin")
-    @RequestMapping("zhixing.view")
-    public String ZXAddView(Model m) {
-        return "/admin/record/zhixing_info";
-    }
-    @RequiresRoles("admin")
-    @RequestMapping("lian.view")
-    public String LianAddView(Model m) {
-        return "/admin/record/lian_info";
-    }*/
-    
+
+
     @RequiresRoles("admin")
     @RequestMapping("add")
     public String add(Userinfo XzlevelInfo) {

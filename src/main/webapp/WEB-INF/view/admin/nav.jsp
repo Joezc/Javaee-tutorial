@@ -82,6 +82,10 @@
                 <ul class="nav" id="side-menu">
 
                     <li>
+                        <a href="${pageContext.request.contextPath}/main.do/admin"><i class="fa fa-book fa-fw"></i> 控制面板</a>
+                    </li>
+
+                    <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件立案管理 <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
 
@@ -94,17 +98,14 @@
                                 <a href="#"> 我的立案管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/record.do/record.view">个人立案</a>
+                                        <a href="${pageContext.request.contextPath}/buss.do/buss.view">个人立案</a>
                                         <!--  连接到admin/recordinfo.jsp -->
                                     </li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/record.do/record.view">企业立案</a>
+                                        <a href="${pageContext.request.contextPath}/buss.do/buss.view">企业立案</a>
                                     </li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/record.do/record_search.view">查询案件</a>
-                                    </li>
-                                    <li>
-                                        <a href="${pageContext.request.contextPath}/record.do/record_update.view">修改案件</a>
+                                        <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增案件</a>
                                     </li>
                                 </ul>
                             </li>
@@ -113,10 +114,10 @@
                                 <a href="#">调查取证管理<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss.view">业务管理</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service.view">业务管理</a>
                                     </li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss_add.view">新增业务</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service_add.view">新增业务</a>
                                     </li>
                                 </ul>
                             </li>
@@ -338,46 +339,42 @@
                         <!-- /.nav-second-level -->
                     </li>
 
-
-                    <li>
-                        <a href="${pageContext.request.contextPath}/main.do/admin"><i class="fa fa-book fa-fw"></i> 控制面板</a>
-                    </li>
                     <%--<li>--%>
                         <%--<a href="${pageContext.request.contextPath}/user.do/user.view"><i class="fa fa-book fa-fw"></i>--%>
                             <%--用户管理</a>--%>
                     <%--</li>--%>
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> 学院管理<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="/"> 整体概况</a>
-                            </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/dept.do/dept.view"> 系部设置</a>
-                            </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/spec.do/spec.view"> 专业设置</a>
-                            </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/clazz.do/clazz.view"> 班级管理</a>
-                            </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/course.do/course.view"> 添加课程</a>
-                            </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/section.do/section.view"> 课程安排</a>
-                            </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/student.do/student.view"> 学生管理</a>
-                            </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/orderbook.do/orderbook_review.view/">
-                                    秘书审核</a>
-                            </li>
+                    <%--<li>--%>
+                        <%--<a href="#"><i class="fa fa-wrench fa-fw"></i> 学院管理<span class="fa arrow"></span></a>--%>
+                        <%--<ul class="nav nav-second-level">--%>
+                            <%--<li>--%>
+                                <%--<a href="/"> 整体概况</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/dept.do/dept.view"> 系部设置</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/spec.do/spec.view"> 专业设置</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/clazz.do/clazz.view"> 班级管理</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/course.do/course.view"> 添加课程</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/section.do/section.view"> 课程安排</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/student.do/student.view"> 学生管理</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/orderbook.do/orderbook_review.view/">--%>
+                                    <%--秘书审核</a>--%>
+                            <%--</li>--%>
 
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
+                        <%--</ul>--%>
+                        <%--<!-- /.nav-second-level -->--%>
+                    <%--</li>--%>
 
                 </ul>
             </div>

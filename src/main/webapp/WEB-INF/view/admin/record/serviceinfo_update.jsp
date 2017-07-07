@@ -6,7 +6,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">案件信息修改</h1>
+            <h1 class="page-header">业务信息修改</h1>
         </div>
         <div class="panel-heading">
         </div>
@@ -14,12 +14,12 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        案件信息
+                        业务信息
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
-                            <form action="${pageContext.request.contextPath}/buss.do/update" method="get">
+                            <form action="${pageContext.request.contextPath}/service.do/update" method="get">
                                 <%-- <label>部门</label>
                                 <select onchange="test(this)" class="form-control" name="Dpname">
                                     <option>-请选择-</option>
@@ -28,35 +28,24 @@
                                     </c:forEach>
                                 </select>
                                 --%>
-                                <label>案件流水号</label>
-                                <input class="form-control" name="casenumber" value="${bussiness.casenumber}" readonly>
-                                <label>用户名</label>
-                                <input class="form-control" name="userid" value="${bussiness.userid}">
-                                <label>裁量编号</label>
-                                <input class="form-control" name="cutnumber" value="${bussiness.cutnumber}">
-                                <label>案件标题</label>
-                                <input class="form-control" name="casetitle" value="${bussiness.casetitle}">
-                                <label>当事人</label>
-                                <input class="form-control" name="parties" value="${bussiness.parties}">
-                                <label>案件来源</label>
-                                <input class="form-control" name="casesource" value="${bussiness.casesource}">
-                                <label>案件承办人</label>
-                                <input class="form-control" name="casename" value="${bussiness.casename}">
-                                <label>立案时间</label>
-                                <input class="form-control" name="recordtime" value="${bussiness.recordtime.year+1900}-${bussiness.recordtime.month+1}-${bussiness.recordtime.date}">
-                                <label>案情描述</label>
-                                <input class="form-control" name="crimereports" value="${bussiness.crimereports}">
-                                <label>处罚依据</label>
-                                <input class="form-control" name="according" value="${bussiness.according}">
-                                <label>立案附件上传</label>
-                                <input class="form-control" name="fileupload" value="${bussiness.fileupload}">
-                                <label>案件类型</label>
-                                <input class="form-control" name="casemold" value="${bussiness.casemold}">
-                                <label>部门编号</label>
-                                <input class="form-control" name="dpno" value="${bussiness.dpno}">
-                                <label>当前状态</label>
-                                <input class="form-control" name="currentstauis" value="${bussiness.currentstauis}">
-                                <!-- <input class="form-control" name="state"> -->
+                                    <label>当前业务编号</label>
+                                    <input class="form-control" name="bunumber" value="${service.bunumber}" readonly>
+                                    <label>案件流水号</label>
+                                    <input class="form-control" name="casenumber" value="${service.casenumber}">
+                                    <label>开始日期</label>
+                                    <input class="form-control" name="bustime" value="${service.bustime.year+1900}-${service.bustime.month+1}-${service.bustime.date}">
+                                    <label>实际结束日期</label>
+                                    <input class="form-control" name="buotime" value="${service.buotime.year+1900}-${service.buotime.month+1}-${service.buotime.date}">
+                                    <label>参与人员</label>
+                                    <input class="form-control" name="bupname" value="${service.bupname}">
+                                    <label>过程描述</label>
+                                    <input class="form-control" name="bupdesc" value="${service.bupdesc}">
+                                    <label>结果描述</label>
+                                    <input class="form-control" name="buodesc" value="${service.buodesc}">
+                                    <label>过程附件上传</label>
+                                    <input class="form-control" name="bupupload" value="${service.bupupload}">
+                                    <label>是否结案</label>
+                                    <input class="form-control" name="casewhether" value="${service.casewhether}"><!-- <input class="form-control" name="state"> -->
                                 <%-- <label>目前状态</label>
                                 <select class="form-control" name="year">
                                     <c:forEach var="term" items="${stateList}">
