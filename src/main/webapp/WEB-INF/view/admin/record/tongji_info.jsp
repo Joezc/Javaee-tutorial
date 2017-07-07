@@ -66,6 +66,25 @@
             </div>
             <!-- /.col-lg-12 -->
         </div>
+
+
+        <div class="main">
+            <canvas id="canvas" width="500" height="400"></canvas>
+        </div>
+        <script src="../../../../js/sChart.min.js"></script>
+        <script>
+            var data2 = [
+                {name:'已办理',value:${numOfFiniashedRecord}},
+                {name:'未办理',value:${numOfAllRecord}-${numOfFiniashedRecord}},
+            ]
+            new sChart('canvas', 'ring', data2, {
+                title: '立案信息统计环形图',
+                bgColor: '#ffffff',
+                titleColor: '#000000',
+                legendColor: '#000000'
+            });
+        </script>
+
     </div>
 
     <!-- /.container-fluid -->
