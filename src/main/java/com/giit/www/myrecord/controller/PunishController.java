@@ -24,7 +24,7 @@ public class PunishController {
     @RequestMapping("punish.view")
     //改成了punishView()
     public String punishView(Model m) {                 
-        m.addAttribute("PunishList", PunishBiz.findAll());
+        m.addAttribute("punishList", PunishBiz.findAll());
         return "/admin/record/punishment";
     }
 
@@ -36,7 +36,8 @@ public class PunishController {
 
     @RequiresRoles("admin")
     @RequestMapping("punish_update.view")
-    public String punishUpdateView(Model m) {
+    public String punishUpdateView(Model m, String itemid) {
+        m.addAttribute("punish", PunishBiz.findById(itemid));
         return "/admin/record/punishment_update";
     }
 
@@ -54,13 +55,11 @@ public class PunishController {
         return "redirect:/punish.do/punish.view";
     }
 
- /*   //处罚库删除
     @RequiresRoles("admin")
     @RequestMapping("delete")
-    public String delete(int I) {
-        deptBiz.delete(deptId);
+    public String delete(String itemid) {
+        PunishBiz.delete(itemid);
         return "redirect:/punish.do/punish.view";
     }
-*/
 
 }

@@ -300,4 +300,8 @@
       Punishstandard = #{punishstandard,jdbcType=VARCHAR}
     where Itemid = #{itemid,jdbcType=VARCHAR}
   </update>
+
+  <select id="findAll" resultMap="BaseResultMap">
+    SELECT * FROM punishment
+  </select>
 </mapper>

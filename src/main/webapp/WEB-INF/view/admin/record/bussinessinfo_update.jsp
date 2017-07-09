@@ -19,7 +19,7 @@
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
-                            <form action="${pageContext.request.contextPath}/buss.do/update" method="get">
+                            <form action="${pageContext.request.contextPath}/punish.do/update" method="get">
                                 <%-- <label>部门</label>
                                 <select onchange="test(this)" class="form-control" name="Dpname">
                                     <option>-请选择-</option>
@@ -28,35 +28,19 @@
                                     </c:forEach>
                                 </select>
                                 --%>
-                                <label>案件流水号</label>
-                                <input class="form-control" name="casenumber" value="${bussiness.casenumber}" readonly>
-                                <label>用户名</label>
-                                <input class="form-control" name="userid" value="${bussiness.userid}">
-                                <label>裁量编号</label>
-                                <input class="form-control" name="cutnumber" value="${bussiness.cutnumber}">
-                                <label>案件标题</label>
-                                <input class="form-control" name="casetitle" value="${bussiness.casetitle}">
-                                <label>当事人</label>
-                                <input class="form-control" name="parties" value="${bussiness.parties}">
-                                <label>案件来源</label>
-                                <input class="form-control" name="casesource" value="${bussiness.casesource}">
-                                <label>案件承办人</label>
-                                <input class="form-control" name="casename" value="${bussiness.casename}">
-                                <label>立案时间</label>
-                                <input class="form-control" name="recordtime" value="${bussiness.recordtime.year+1900}-${bussiness.recordtime.month+1}-${bussiness.recordtime.date}">
-                                <label>案情描述</label>
-                                <input class="form-control" name="crimereports" value="${bussiness.crimereports}">
-                                <label>处罚依据</label>
-                                <input class="form-control" name="according" value="${bussiness.according}">
-                                <label>立案附件上传</label>
-                                <input class="form-control" name="fileupload" value="${bussiness.fileupload}">
-                                <label>案件类型</label>
-                                <input class="form-control" name="casemold" value="${bussiness.casemold}">
-                                <label>部门编号</label>
-                                <input class="form-control" name="dpno" value="${bussiness.dpno}">
-                                <label>当前状态</label>
-                                <input class="form-control" name="currentstauis" value="${bussiness.currentstauis}">
-                                <!-- <input class="form-control" name="state"> -->
+                                    <label>事件编号</label>
+                                    <input class="form-control" name="itemid" value="punish.itemid" readonly>
+                                    <label>事件名称</label>
+                                    <input class="form-control" name="itemname" value="punish.itemname">
+                                    <label>事件类别</label>
+                                    <input class="form-control" name="itemcate" value="punish.itemcate">
+                                    <label>办理部门</label>
+                                    <input class="form-control" name="department" value="punish.department">
+                                    <label>处罚种类</label>
+                                    <input class="form-control" name="punishtype" value="punish.punishtype">
+                                    <label>处罚标准</label>
+                                    <input class="form-control" name="punishstandard" value="punish.punishstandard">
+                                    <!-- <input class="form-control" name="state"> -->
                                 <%-- <label>目前状态</label>
                                 <select class="form-control" name="year">
                                     <c:forEach var="term" items="${stateList}">

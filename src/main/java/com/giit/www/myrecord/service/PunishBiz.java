@@ -13,10 +13,9 @@ public interface PunishBiz {
     
     public void updatePunish(Punishment PunishInfo);
     
-    public void deletePunish(Punishment PunishInfo);
-    
-    public void findByDescription(String description);
-
     public List<Punishment> findAll();
 
+    void delete(String itemid);
+
+    Object findById(String itemid);
 }

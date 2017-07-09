@@ -93,4 +93,6 @@ public interface PunishmentMapper {
      * @mbggenerated Thu Jul 06 22:59:22 CST 2017
      */
     int updateByPrimaryKey(Punishment record);
+
+    List<Punishment> findAll();
 }

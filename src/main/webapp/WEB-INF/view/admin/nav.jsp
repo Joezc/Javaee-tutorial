@@ -89,13 +89,13 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件立案管理 <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
 
-                            <li>
-                                <a href="${pageContext.request.contextPath}/record.do/record.view"> 我的立案</a>
-                                <!--  连接到admin/recordinfo.jsp -->
-                            </li>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/record.do/record.view"> 我的立案</a>--%>
+                                <%--<!--  连接到admin/recordinfo.jsp -->--%>
+                            <%--</li>--%>
 
                             <li>
-                                <a href="#"> 我的立案管理 <span class="fa arrow"></span></a>
+                                <a href="#"> 立案管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
                                         <a href="${pageContext.request.contextPath}/buss.do/buss.view">个人立案</a>
@@ -261,12 +261,12 @@
                                 <a href="${pageContext.request.contextPath}/punish.do/punish.view"> 处罚库查询</a>
                                 <!--  连接到admin/punishment.jsp -->
                             </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/punish.do/punish_add.view"> 添加自由裁量</a>
-                            </li>
-                            <li>
-                                <a href="${pageContext.request.contextPath}/punish.do/punish_update.view"> 修改自由裁量</a>
-                            </li>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/punish.do/punish_add.view"> 添加自由裁量</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="${pageContext.request.contextPath}/punish.do/punish_update.view"> 修改自由裁量</a>--%>
+                            <%--</li>--%>
                         </ul>
                     </li>
 
