@@ -253,7 +253,7 @@
                             <%--  <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
                                  处罚库管理</a> --%>
                             <li>
-                                <a href="${pageContext.request.contextPath}/usermanage.do/usermanage.view">用户管理</a>
+                                <a href="${pageContext.request.contextPath}/usermanage.do/usermanage.view">行政人员管理</a>
                                 <%--<a href="#"><i class="fa fa-wrench fa-fw"></i> 用户管理 <span class="fa arrow"></span></a>--%>
                                 <%--<ul class="nav nav-third-level">--%>
                                     <%--<li>--%>
@@ -263,6 +263,8 @@
                                         <%--<a href="${pageContext.request.contextPath}/usermanage.do/usersetrole.view">用户设置角色</a>--%>
                                     <%--</li>--%>
                                 <%--</ul>--%>
+                                <a href="${pageContext.request.contextPath}/user.do/user.view"><i class="fa fa-book fa-fw"></i>
+                                    用户管理</a>
                             </li>
                             <li>
                                 <a href="${pageContext.request.contextPath}/role.do/role.view">角色管理</a>
@@ -311,17 +313,6 @@
                         <!-- /.nav-second-level -->
                     </li>
 
-
-                    <li>
-                        <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
-                            系统管理 </a>
-                    </li>
-
-
-                    <li>
-                        <a href="${pageContext.request.contextPath}/user.do/user.view"><i class="fa fa-book fa-fw"></i>
-                            用户管理</a>
-                    </li>
                     <%--<li>--%>
                         <%--<a href="#"><i class="fa fa-wrench fa-fw"></i> 学院管理<span class="fa arrow"></span></a>--%>
                         <%--<ul class="nav nav-second-level">--%>

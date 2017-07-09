@@ -5,7 +5,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">业务信息管理</h1>
+            <h1 class="page-header">案件信息管理</h1>
         </div>
         <div class="panel-heading">
         </div>
@@ -13,10 +13,18 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        业务信息
+                        案件信息
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
+                        <form class="form-inline"  action="${pageContext.request.contextPath}/buss.do/search" method="get">
+                            <div class="form-group">
+                                <label>案件流水号</label>
+                                <input class="form-control" name="casenumber">
+                            </div>
+                            <button type="submit" class="btn btn-default">查询</button>
+                        </form>
+
                         <div class="dataTable_wrapper">
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
@@ -67,9 +75,9 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
-
                         </div>
                         <!-- /.table-responsive -->
+
                     </div>
                     <!-- /.panel-body -->
                 </div>

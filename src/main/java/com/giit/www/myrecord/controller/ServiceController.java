@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by haining
@@ -65,6 +67,20 @@ public class ServiceController {
         Serviceinformation tmp = ServiceBiz.findById(bunumber);
         return "redirect:/service.do/service.view?type=" + tmp.getType();
     }
+
+    @RequestMapping("search")
+    public String search(Model m, String bunumber, String type) {
+        if (bunumber.equals("")) {
+            return "redirect:/service.do/service.view?type=" + type;
+        }
+        Serviceinformation r = ServiceBiz.findById(bunumber);
+        List<Serviceinformation> ret = new ArrayList<>();
+        ret.add(r);
+        m.addAttribute("serviceList", ret);
+        m.addAttribute("type", type);
+        return "/admin/record/serviceinfo";
+    }
+
 
 
 }

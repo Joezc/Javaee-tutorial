@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by haining 
@@ -67,5 +69,18 @@ public class PunishController {
         PunishBiz.delete(itemid);
         return "redirect:/punish.do/punish.view";
     }
+
+    @RequestMapping("search")
+    public String search(Model m, String itemid) {
+        if (itemid.equals("")) {
+            return "redirect:/punish.do/punish.view";
+        }
+        Punishment r = PunishBiz.findById(itemid);
+        List<Punishment> ret = new ArrayList<>();
+        ret.add(r);
+        m.addAttribute("punishList", ret);
+        return "/admin/record/punishment";
+    }
+
 
 }

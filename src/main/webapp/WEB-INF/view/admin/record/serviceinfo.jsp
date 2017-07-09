@@ -17,6 +17,16 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
+                        <form class="form-inline"  action="${pageContext.request.contextPath}/service.do/search?type=${type}" method="get">
+                            <div class="form-group">
+                                <label>当前业务编号</label>
+                                <input class="form-control" name="bunumber">
+                            </div>
+                            <button type="submit" class="btn btn-default">查询</button>
+                            <input class="form-control" name="type" value="${type}" type="hidden" readonly>
+                        </form>
+
+
                         <div class="dataTable_wrapper">
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>

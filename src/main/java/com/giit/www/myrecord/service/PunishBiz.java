@@ -17,5 +17,5 @@ public interface PunishBiz {
 
     void delete(String itemid);
 
-    Object findById(String itemid);
+    Punishment findById(String itemid);
 }

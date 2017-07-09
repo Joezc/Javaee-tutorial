@@ -11,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by haining 
@@ -72,6 +74,17 @@ public class BussinessController {
         return "redirect:/buss.do/buss.view";
     }
 
+    @RequestMapping("search")
+    public String search(Model m, String casenumber) {
+        if (casenumber.equals("")) {
+            return "redirect:/buss.do/buss.view";
+        }
+        Recordinformation r = BussinessBiz.findById(casenumber);
+        List<Recordinformation> ret = new ArrayList<>();
+        ret.add(r);
+        m.addAttribute("bussinessList", ret);
+        return "/admin/record/bussinessinfo";
+    }
 
 }
 

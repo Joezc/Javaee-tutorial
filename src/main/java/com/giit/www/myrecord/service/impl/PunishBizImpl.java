@@ -37,7 +37,7 @@ public class PunishBizImpl implements PunishBiz {
     }
 
     @Override
-    public Object findById(String itemid) {
+    public  Punishment findById(String itemid) {
         return punishmentMapper.selectByPrimaryKey(itemid);
     }
 }
