@@ -2,11 +2,13 @@ package com.giit.www.myrecord.service.impl;
 
 import com.giit.www.entity.Recordinformation;
 import com.giit.www.entity.Serviceinformation;
+import com.giit.www.entity.ServiceinformationExample;
 import com.giit.www.mapper.RecordinformationMapper;
 import com.giit.www.mapper.ServiceinformationMapper;
 import com.giit.www.myrecord.controller.BussinessController;
 import com.giit.www.myrecord.service.BussinessBiz;
 import com.giit.www.myrecord.service.ServiceBiz;
+import org.omg.CORBA.ServiceInformation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -58,5 +60,12 @@ public class ServiceBizImpl implements ServiceBiz {
 	@Override
 	public List<Serviceinformation> findAll() {
 		return serviceinformationMapper.findAll();
+	}
+
+	@Override
+	public List<Serviceinformation> findByType(String type) {
+		ServiceinformationExample example = new ServiceinformationExample();
+		example.createCriteria().andTypeEqualTo(type);
+		return serviceinformationMapper.selectByExample(example);
 	}
 }

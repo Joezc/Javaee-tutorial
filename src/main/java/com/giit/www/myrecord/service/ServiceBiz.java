@@ -2,6 +2,7 @@ package com.giit.www.myrecord.service;
 
 import com.giit.www.entity.Recordinformation;
 import com.giit.www.entity.Serviceinformation;
+import org.omg.CORBA.ServiceInformation;
 
 import java.util.List;
 
@@ -22,4 +23,5 @@ public interface ServiceBiz {
 
     public List<Serviceinformation> findAll();
 
+    public List<Serviceinformation> findByType(String type);
 }

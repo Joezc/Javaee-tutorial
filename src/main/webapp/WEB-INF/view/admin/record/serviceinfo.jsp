@@ -30,6 +30,7 @@
                                     <th>结果描述</th>
                                     <th>过程附件上传</th>
                                     <th>是否结案</th>
+                                    <th>阶段</th>
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -45,6 +46,7 @@
                                         <td>${service.buodesc}</td>
                                         <td>${service.bupupload}</td>
                                         <td>${service.casewhether}</td>
+                                        <td>${type}</td>
                                         <td>
                                             <!-- 这里没改 -->
                                             <a href="${pageContext.request.contextPath}/service.do/service_update.view?bunumber=${service.bunumber}">修改</a>

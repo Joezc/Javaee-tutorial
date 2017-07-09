@@ -3,6 +3,7 @@ package com.giit.www.myrecord.controller;
 import com.giit.www.myrecord.service.ServiceBiz;
 import com.giit.www.entity.Serviceinformation;
 
+import org.apache.ibatis.jdbc.Null;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,20 +19,21 @@ import javax.annotation.Resource;
 @Controller
 @RequestMapping("service.do")
 public class ServiceController {
-
     @Resource(name="serviceBizImpl")
     private ServiceBiz ServiceBiz;
 
     @RequiresRoles("admin")
     @RequestMapping("service.view")
-    public String serviceView(Model m) {
-        m.addAttribute("serviceList", ServiceBiz.findAll());
+    public String serviceView(Model m, String type) {
+        m.addAttribute("serviceList", ServiceBiz.findByType(type));
+        m.addAttribute("type", type);
         return "/admin/record/serviceinfo";
     }
 
     @RequiresRoles("admin")
     @RequestMapping("service_add.view")
-    public String serviceAddView(Model m) {
+    public String serviceAddView(Model m, String type) {
+        m.addAttribute("type", type);
         return "/admin/record/serviceinfo_add";
     }
 
@@ -46,21 +48,22 @@ public class ServiceController {
     @RequestMapping("add")
     public String add(Serviceinformation serviceinformation) {
         ServiceBiz.createService(serviceinformation);
-        return "redirect:/service.do/service.view";
+        return "redirect:/service.do/service.view?type=" + serviceinformation.getType();
     }
 
     @RequiresRoles("admin")
     @RequestMapping("update")
     public String update(Serviceinformation serviceinformation) {
         ServiceBiz.updateService(serviceinformation);
-        return "redirect:/service.do/service.view";
+        return "redirect:/service.do/service.view?type=" + serviceinformation.getType();
     }
 
     @RequiresRoles("admin")
     @RequestMapping("delete")
     public String delete(String bunumber) {
         ServiceBiz.deleteService(bunumber);
-        return "redirect:/service.do/service.view";
+        Serviceinformation tmp = ServiceBiz.findById(bunumber);
+        return "redirect:/service.do/service.view?type=" + tmp.getType();
     }
 
 

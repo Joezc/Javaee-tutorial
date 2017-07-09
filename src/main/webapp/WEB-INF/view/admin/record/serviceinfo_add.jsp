@@ -39,9 +39,11 @@
                                     <input class="form-control" name="bupupload">
                                     <label>是否结案</label>
                                     <input class="form-control" name="casewhether">
-                                    <!-- <input class="form-control" name="casewhether"> -->
-                                <%-- <label>目前状态</label>
-                                <select class="form-control" name="year">
+                                    <label>当前阶段</label>
+                                    <input class="form-control" name="type" value="${type}" readonly>
+                                <%--<input class="form-control" name="casewhether">--%>
+                                <%--<label>目前状态</label>--%>
+                                <%-- <select class="form-control" name="year">
                                     <c:forEach var="term" items="${stateList}">
                                         <option value="${state.val}">${state.text}</option>
                                     </c:forEach>
