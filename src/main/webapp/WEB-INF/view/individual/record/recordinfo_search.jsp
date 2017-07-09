@@ -5,7 +5,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">业务信息管理</h1>
+            <h1 class="page-header">立案信息查询</h1>
         </div>
         <div class="panel-heading">
         </div>
@@ -13,7 +13,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        业务信息
+                        立案信息
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -21,43 +21,37 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>当前业务编号</th>
                                     <th>案件流水号</th>
-                                    <th>开始日期</th>
-                                    <th>实际结束日期</th>
-                                    <th>参与人员</th>
-                                    <th>过程描述</th>
-                                    <th>结果描述</th>
-                                    <th>过程附件上传</th>
-                                    <th>是否结案</th>
-                                    <th></th>
+                                    <th>案件标题</th>
+                                    <th>当事人</th>
+                                    <th>案件类型</th>
+                                    <th>接受部门</th>
+                                    <th>已完成步骤</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach var="service" items="${serviceList}">
+                                <c:forEach var="record" items="${recordList}">
                                     <tr>
-                                        <td>${service.bunumber}</td>
-                                        <td>${service.casenumber}</td>
-                                        <td>${service.bustime}</td>
-                                        <td>${service.buotime}</td>
-                                        <td>${service.bupname}</td>
-                                        <td>${service.bupdesc}</td>
-                                        <td>${service.buodesc}</td>
-                                        <td>${service.bupupload}</td>
-                                        <td>${service.casewhether}</td>
+                                        <td>${record.casenumber}</td>
+                                        <td>${record.casetitle}</td>
+                                        <td>${record.parties}</td>
+                                        <td>${record.casemold}</td>
+                                        <td>${record.dpno}</td>
+                                        <td>${record.currentstauis}</td>
                                         <td>
-                                            <!-- 这里没改 -->
-                                            <a href="${pageContext.request.contextPath}/service.do/service_update.view?bunumber=${service.bunumber}">修改</a>
+                                            <a href="${pageContext.request.contextPath}/student.do/student_update.view?studentId=${student.studentId}">修改</a>
                                         </td>
                                         <td>
-                                            <a href="${pageContext.request.contextPath}/service.do/delete?bunumber=${service.bunumber}"
-                                               onclick="return confirm('是否要删除该业务信息')">删除</a>
+                                            <a href="${pageContext.request.contextPath}/student.do/delete?studentId=${student.studentId}"
+                                               onclick="return confirm('是否要删除该学生信息')">删除</a>
                                         </td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>
                             </table>
-
+                            <%-- <a href="${pageContext.request.contextPath}/record.do/record_add.view" class="btn btn-primary" role="button">添加立案</a>
+                            <a href="${pageContext.request.contextPath}/record.do/record_update.view" class="btn btn-primary" role="button">修改立案</a>
+                             --%>
                         </div>
                         <!-- /.table-responsive -->
                     </div>

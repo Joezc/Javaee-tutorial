@@ -26,4 +26,6 @@ public interface XzlevelBiz {
     public List<Userinfo> findAll();
 
     List<Integer> searchByTime(Date starttime, Date endtime);
+
+    List<Integer> searchServiceByTime(Date starttime, Date endtime, String type);
 }

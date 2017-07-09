@@ -25,31 +25,31 @@ public class XzlevelController {
     @Resource(name = "xzlevelBizImpl")
     private XzlevelBiz XzlevelBiz;
 
-    @RequiresRoles("admin")
-    @RequestMapping("xzlevel.view")
-    public String LeveltotalView(Model m) {
-        m.addAttribute("XzlevelList", XzlevelBiz.findAll());
-        return "/admin/record/level_totalinfo";
-    }
-    @RequiresRoles("admin")
-    @RequestMapping("leveldetail.view")
-    public String LeveldetailView(Model m) {
-        m.addAttribute("XzlevelList", XzlevelBiz.findAll());
-        return "/admin/record/level_detailinfo";
-    }
-
-    @RequiresRoles("admin")
-    @RequestMapping("level_add.view")
-    public String LevelAddView(Model m) {
-        return "/admin/record/levelinfo_add";
-    }
-
-    @RequiresRoles("admin")
-    @RequestMapping("level_update.view")
-    public String LevelUpdateView(Model m) {
-        return "/admin/record/levelinfo_update";
-    }
-    
+//    @RequiresRoles("admin")
+//    @RequestMapping("xzlevel.view")
+//    public String LeveltotalView(Model m) {
+//        m.addAttribute("XzlevelList", XzlevelBiz.findAll());
+//        return "/admin/record/level_totalinfo";
+//    }
+//    @RequiresRoles("admin")
+//    @RequestMapping("leveldetail.view")
+//    public String LeveldetailView(Model m) {
+//        m.addAttribute("XzlevelList", XzlevelBiz.findAll());
+//        return "/admin/record/level_detailinfo";
+//    }
+//
+//    @RequiresRoles("admin")
+//    @RequestMapping("level_add.view")
+//    public String LevelAddView(Model m) {
+//        return "/admin/record/levelinfo_add";
+//    }
+//
+//    @RequiresRoles("admin")
+//    @RequestMapping("level_update.view")
+//    public String LevelUpdateView(Model m) {
+//        return "/admin/record/levelinfo_update";
+//    }
+//
     //把统计信息和行政写在了一起
     @RequiresRoles("admin")
     @RequestMapping("tongji.view")
@@ -71,27 +71,48 @@ public class XzlevelController {
         return "/admin/record/tongji_info";
     }
 
-
     @RequiresRoles("admin")
-    @RequestMapping("add")
-    public String add(Userinfo XzlevelInfo) {
-    	XzlevelBiz.createXzlevel(XzlevelInfo);
-        return "redirect:/xzlevel.do/level_totalinfo.view";
+    @RequestMapping("tongjiService.view")
+    public String statisticService(Model m, String type) {
+        m.addAttribute("type", type);
+        return "/admin/record/statistic_service";
     }
 
     @RequiresRoles("admin")
-    @RequestMapping("update")
-    public String update(Userinfo XzlevelInfo) {
-    	XzlevelBiz.updateXzlevel(XzlevelInfo);
-        return "redirect:/xzlevel.do/level_totalinfo.view";
-    }
-    /*逻辑上的删除*/
-    @RequiresRoles("admin")
-    @RequestMapping("delete")
-    public String delete(Userinfo XzlevelInfo) {
-    	XzlevelBiz.updateXzlevel(XzlevelInfo);
-        return "redirect:/xzlevel.do/level_totalinfo.view";
+    @RequestMapping("searchService")
+    public String searchService(Model m, Date starttime, Date endtime, String dpname, String type) {
+        m.addAttribute("starttime", starttime.toString());
+        m.addAttribute("endtime", endtime.toString());
+        m.addAttribute("dpname", dpname);
+        List<Integer> num = XzlevelBiz.searchServiceByTime(starttime, endtime, type);
+        m.addAttribute("numOfFiniashedRecord", Integer.toString(num.get(0)));
+        m.addAttribute("numOfAllRecord", Integer.toString(num.get(1)));
+        m.addAttribute("ratio", Double.toString(1.0* num.get(0) / num.get(1)));
+        m.addAttribute("type", type);
+
+        return "/admin/record/statistic_service";
     }
 
+//    @RequiresRoles("admin")
+//    @RequestMapping("add")
+//    public String add(Userinfo XzlevelInfo) {
+//    	XzlevelBiz.createXzlevel(XzlevelInfo);
+//        return "redirect:/xzlevel.do/level_totalinfo.view";
+//    }
+//
+//    @RequiresRoles("admin")
+//    @RequestMapping("update")
+//    public String update(Userinfo XzlevelInfo) {
+//    	XzlevelBiz.updateXzlevel(XzlevelInfo);
+//        return "redirect:/xzlevel.do/level_totalinfo.view";
+//    }
+//    /*逻辑上的删除*/
+//    @RequiresRoles("admin")
+//    @RequestMapping("delete")
+//    public String delete(Userinfo XzlevelInfo) {
+//    	XzlevelBiz.updateXzlevel(XzlevelInfo);
+//        return "redirect:/xzlevel.do/level_totalinfo.view";
+//    }
+//
 
 }

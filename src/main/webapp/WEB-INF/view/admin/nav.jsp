@@ -138,10 +138,10 @@
                                 <a href="#">告知决定管理<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss.view?type=notify">业务管理</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service.view?type=notify">业务管理</a>
                                     </li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss_add.view?type=notify">新增业务</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service_add.view?type=notify">新增业务</a>
                                     </li>
                                 </ul>
                             </li>
@@ -150,10 +150,10 @@
                                 <a href="#"> 案件送达管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss.view?type=send">业务管理</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service.view?type=send">业务管理</a>
                                     </li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss_add.view?type=send">新增业务</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service_add.view?type=send">新增业务</a>
                                     </li>
                                 </ul>
                             </li>
@@ -168,10 +168,10 @@
                                 <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件执行管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss.view?type=execution">业务管理</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service.view?type=execution">业务管理</a>
                                     </li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss_add.view?type=execution">新增业务</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service_add.view?type=execution">新增业务</a>
                                     </li>
                                 </ul>
                             </li>
@@ -180,10 +180,10 @@
                                 <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件存档管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss.view?type=index">业务管理</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service.view?type=index">业务管理</a>
                                     </li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss_add.view?type=index">新增业务</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service_add.view?type=index">新增业务</a>
                                     </li>
                                 </ul>
                             </li>
@@ -192,10 +192,10 @@
                                 <a href="#"><i class="fa fa-wrench fa-fw"></i> 案件听证管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss.view?type=hearing">业务管理</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service.view?type=hearing">业务管理</a>
                                     </li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss_add.view?type=hearing">新增业务</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service_add.view?type=hearing">新增业务</a>
                                     </li>
                                 </ul>
                             </li>
@@ -205,10 +205,10 @@
                                 <a href="#"><i class="fa fa-wrench fa-fw"></i> 复议诉讼管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss.view?type=lawsuit">业务管理</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service.view?type=lawsuit">业务管理</a>
                                     </li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss_add.view?type=lawsuit">新增业务</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service_add.view?type=lawsuit">新增业务</a>
                                     </li>
                                 </ul>
                             </li>
@@ -217,10 +217,10 @@
                                 <a href="#"><i class="fa fa-wrench fa-fw"></i> 结束案件查询 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss.view?type=end">业务管理</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service.view?type=end">业务管理</a>
                                     </li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/buss.do/buss_add.view?type=end">新增业务</a>
+                                        <a href="${pageContext.request.contextPath}/service.do/service_add.view?type=end">新增业务</a>
                                     </li>
                                 </ul>
                             </li>
@@ -286,10 +286,6 @@
                         </ul>
                     </li>
 
-                    <%-- <li>
-                        <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
-                            系统管理 </a>
-                    </li> --%>
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> 统计信息 <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -300,25 +296,32 @@
                                 <a href="${pageContext.request.contextPath}/xzlevel.do/tongji.view"> 立案信息统计</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongji.view"> 案件审查信息统计</a>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongjiService.view?type=review"> 案件审查信息统计</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongji.view"> 案件送达信息统计</a>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongjiService.view?type=send"> 案件送达信息统计</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongji.view"> 案件执行信息统计</a>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongjiService.view?type=executioin"> 案件执行信息统计</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongji.view"> 案件存档信息统计</a>
+                                <a href="${pageContext.request.contextPath}/xzlevel.do/tongjiService.view?type=index"> 案件存档信息统计</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
 
-                    <%--<li>--%>
-                        <%--<a href="${pageContext.request.contextPath}/user.do/user.view"><i class="fa fa-book fa-fw"></i>--%>
-                            <%--用户管理</a>--%>
-                    <%--</li>--%>
+
+                    <li>
+                        <a href="${pageContext.request.contextPath}/role.do/role.view"><i class="fa fa-book fa-fw"></i>
+                            系统管理 </a>
+                    </li>
+
+
+                    <li>
+                        <a href="${pageContext.request.contextPath}/user.do/user.view"><i class="fa fa-book fa-fw"></i>
+                            用户管理</a>
+                    </li>
                     <%--<li>--%>
                         <%--<a href="#"><i class="fa fa-wrench fa-fw"></i> 学院管理<span class="fa arrow"></span></a>--%>
                         <%--<ul class="nav nav-second-level">--%>

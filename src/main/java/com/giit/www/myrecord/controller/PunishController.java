@@ -28,6 +28,12 @@ public class PunishController {
         return "/admin/record/punishment";
     }
 
+    @RequestMapping("punish_readonly.view")
+    public String punishView_readonly(Model m) {
+        m.addAttribute("punishList", PunishBiz.findAll());
+        return "/individual/record/punishment";
+    }
+
     @RequiresRoles("admin")
     @RequestMapping("punish_add.view")
     public String punishAddView(Model m) {

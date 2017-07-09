@@ -31,6 +31,13 @@ public class BussinessController {
         return "/admin/record/bussinessinfo";
     }
 
+    @RequestMapping("buss_readonly.view")
+    public String bussView_readonly(Model m) {
+        m.addAttribute("bussinessList", BussinessBiz.findAll());
+        return "/individual/record/bussinessinfo";
+    }
+
+
     @RequiresRoles("admin")
     @RequestMapping("buss_add.view")
     public String bussAddView(Model m) {
