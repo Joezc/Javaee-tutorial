@@ -46,5 +46,5 @@ Json: Gson
 # 功能介绍:
 对数据库中案件表，业务表，处罚表等的增删改查功能。以及可视化的展示功能。
 
-![image](./doc/demo.png)
+![image](./img/demo.png)
 
