@@ -17,10 +17,10 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <form class="form-inline"  action="${pageContext.request.contextPath}/buss.do/search" method="get">
+                        <form class="form-inline"  action="${pageContext.request.contextPath}/punish.do/search_readonly" method="get">
                             <div class="form-group">
                                 <label>事件编号</label>
-                                <input class="form-control" name="casenumber">
+                                <input class="form-control" name="itemid">
                             </div>
                             <button type="submit" class="btn btn-default">查询</button>
                         </form>

@@ -61,7 +61,9 @@
                             <!-- Change this to a button or input when using this as a form -->
                             <input type="submit" value="登录" class="btn btn-primary form-control">
                             <br><br>
-                            <a href="register.jsp" class="btn btn-primary form-control" role="button">注册</a>
+                            <%--<a href="register.jsp" class="btn btn-primary form-control" role="button">注册</a>--%>
+                            <a href="${pageContext.request.contextPath}/user.do/register.view" class="btn btn-primary form-control" role="button">注册</a>
+
                         </fieldset>
                     </form>
                 </div>

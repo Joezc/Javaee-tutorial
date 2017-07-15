@@ -49,7 +49,7 @@
     </bean>
 
     <!-- 控制器异常处理 -->
-    <bean id="exceptionHandlerExceptionResolver" class="com.giit.www.exception.DefaultExceptionHandler">
+    <bean id="exceptionHandlerExceptionResolver" class="com.xzgl.www.exception.DefaultExceptionHandler">
     </bean>
 
     <import resource="classpath:spring-shiro.xml"/>

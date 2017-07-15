@@ -32,8 +32,7 @@
                                 <input class="form-control" name="dpname">
                             </div>
                             <div class="form-group">
-                                <label>类型</label>
-                                <input class="form-control" name="type" value="${type}" readonly>
+                                <input class="form-control" name="type" value="${type}" type="hidden" readonly>
                             </div>
                             <button type="submit" class="btn btn-default">提交</button>
                         </form>

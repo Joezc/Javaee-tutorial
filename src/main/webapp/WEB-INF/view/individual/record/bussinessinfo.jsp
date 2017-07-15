@@ -17,7 +17,13 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-
+                        <form class="form-inline"  action="${pageContext.request.contextPath}/buss.do/search_individual" method="get">
+                            <div class="form-group">
+                                <label>案件流水号</label>
+                                <input class="form-control" name="casenumber">
+                            </div>
+                            <button type="submit" class="btn btn-default">查询</button>
+                        </form>
 
                         <div class="dataTable_wrapper">
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
